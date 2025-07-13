@@ -16,27 +16,20 @@ import {
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import './Home.css';
   import aboutlogo from "../logoassets/aboutlogo.png";
-  import heroimage from "../logoassets/g1.jpg";
+  import herocollage from "../logoassets/herocollage.png";
   
   const Home = () => {
     return (
       <main className="home-container">
         {/* Hero Section */}
-        <section id="home" className="hero">
-          <div className="container">
-            <div className="hero-content">
-              <h1>Welcome to FamVille</h1>
-              <p>Come as Guests, Stay as Family.</p>
-              {/* <div className="hero-buttons">
-                <a href="#" className="btn-primary">Explore</a>
-                <a href="#" className="btn-secondary">Learn More</a>
-              </div> */}
-            </div>
-            <div className="hero-image">
-              <img src={heroimage} alt="Happy family" className="hero-img" />
-            </div>
-          </div>
-        </section>
+        <section id="home" className="hero" style={{ backgroundImage: `url(${herocollage})` }}>
+                <div className="container">
+                    <div className="hero-content">
+                        <h1>Welcome to FamVille</h1>
+                        <p>Come as Guests, Stay as Family.</p>
+                    </div>
+                </div>
+            </section>
   
         {/* About Section */}
         <section id="about" className="about">
@@ -164,54 +157,38 @@ The FamVille® community.</p>
         </section> */}
   
         {/* Contact Section */}
-        <section id="contact" className="contact">
-          <div className="container">
-            <div className="contact-content">
-              <h2>Get In Touch</h2>
-              <p>Have questions? Want to schedule a tour? We'd love to hear from you!</p>
-              
-              <div className="contact-info">
-                <div className="contact-item">
-                  <FontAwesomeIcon icon={faMapMarkerAlt} />
-                  <p>123 Family Lane, Community City, CC 12345</p>
-                </div>
-                <div className="contact-item">
-                  <FontAwesomeIcon icon={faPhone} />
-                  <p>(123) 456-7890</p>
-                </div>
-                <div className="contact-item">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <p>info@famville.com</p>
-                </div>
-              </div>
-              
-              <div className="social-links">
-                <a href="#"><FontAwesomeIcon icon={faFacebookF} /></a>
-                <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
-                <a href="#"><FontAwesomeIcon icon={faYoutube} /></a>
-              </div>
-            </div>
-            
-            <div className="contact-form">
-              <form id="contactForm">
-                <div className="form-group">
-                  <input type="text" id="name" placeholder="Your Name" required />
-                </div>
-                <div className="form-group">
-                  <input type="email" id="email" placeholder="Your Email" required />
-                </div>
-                <div className="form-group">
-                  <input type="tel" id="phone" placeholder="Your Phone" />
-                </div>
-                <div className="form-group">
-                  <textarea id="message" placeholder="Your Message" required></textarea>
-                </div>
-                <button type="submit" className="btn-primary">Send Message</button>
-              </form>
-            </div>
+<section id="contact" className="contact">
+  <div className="container">
+    <div className="contact-wrapper">
+      <div className="contact-content">
+        <h2>Get In Touch</h2>
+        <p>Have questions? Want to schedule a tour? <br></br>We'd love to hear from you!</p>
+        
+        <div className="contact-info">
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faMapMarkerAlt} />
+            <p>The Famville Plot no.4, Amaltash Marg, main road, near Gaur medical store, adjacent to PNB Bank, Sector 22, Noida, Uttar Pradesh 201301</p>
           </div>
-        </section>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faPhone} />
+            <p>Girls PG & Famville Luxe: +919953232388</p>
+          </div>
+          <div className="contact-item">
+            <FontAwesomeIcon icon={faPhone} />
+            <p>Boys PG: +919891263948</p>
+          </div>
+          
+        </div>
+        
+        
+      </div>
+      
+      <div className="contact-image">
+        <img src="/images/contact.png" alt="Contact Famville" />
+      </div>
+    </div>
+  </div>
+</section>
       </main>
     );
   };
