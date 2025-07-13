@@ -1,0 +1,152 @@
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo-image {
+    height: 50px; /* Adjust based on your logo's aspect ratio */
+    width: auto;
+  }
+  
+  .slogan {
+    flex: 2;
+    text-align: center;
+    font-style: normal;
+    color: #000000;
+    font-weight: 500;
+  }
+  
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: #2c3e50;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
+  }
+  
+  .nav-links a:hover {
+    color: #3498db;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #3498db;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2c3e50;
+    z-index: 1001;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .slogan {
+      display: none; /* Hide slogan on mobile */
+    }
+  
+    .nav-links {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      gap: 15px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-150%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .nav-links.active {
+      transform: translateY(0);
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .logo-container {
+      flex: none;
+    }
+  }
+  
+  /* Small mobile devices */
+  @media (max-width: 480px) {
+    .logo-image {
+      height: 40px;
+    }
+  }
+
+
+
+
+
+
+  /* Hide/Show on Scroll */
+.navbar {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .navbar.visible {
+    transform: translateY(0);
+  }
+  
+  .navbar.hidden {
+    transform: translateY(-100%);
+  }
+  
+  /* Optional: Add a slight background when scrolled */
+  .navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
