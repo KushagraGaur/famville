@@ -15,6 +15,8 @@ import {
   } from '@fortawesome/free-brands-svg-icons';
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import './Home.css';
+  import aboutlogo from "../logoassets/aboutlogo.png";
+  import heroimage from "../logoassets/g1.jpg";
   
   const Home = () => {
     return (
@@ -31,7 +33,7 @@ import {
               </div> */}
             </div>
             <div className="hero-image">
-              <img src="/images/hero-family.jpg" alt="Happy family" />
+              <img src={heroimage} alt="Happy family" className="hero-img" />
             </div>
           </div>
         </section>
@@ -40,23 +42,25 @@ import {
         <section id="about" className="about">
           <div className="container">
             <div className="about-image">
-              <img src="/images/about-community.jpg" alt="Community gathering" />
+              <img src={aboutlogo} alt="FamVille logo" className="about-img" />
             </div>
             <div className="about-content">
               <h2>About FamVille</h2>
-              <p>FamVille is a vibrant community designed to bring families together through shared experiences, activities, and support systems.</p>
-              <ul className="features-list">
-                <li><FontAwesomeIcon icon={faCheckCircle} /> Safe environment for families</li>
-                <li><FontAwesomeIcon icon={faCheckCircle} /> Engaging activities for all ages</li>
-                <li><FontAwesomeIcon icon={faCheckCircle} /> Supportive community network</li>
-                <li><FontAwesomeIcon icon={faCheckCircle} /> Modern facilities and amenities</li>
-              </ul>
+              <p>Tired of finding a new place to live in? 
+<br></br>
+Don't worry!  We're here to help.
+<br></br>
+We are a one stop solution to your renting troubles. Live hassle free in your own space that is high on convenience and flexibility. 
+<br></br>Find your family in 
+
+The FamVille® community.</p>
+              
             </div>
           </div>
         </section>
   
-        {/* Services Section */}
-        <section id="services" className="services">
+         {/* Services Section */}
+         <section id="services" className="services">
           <div className="container">
             <h2>Our Services</h2>
             <p className="section-subtitle">Discover what we offer to make your family life better</p>

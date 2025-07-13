@@ -46,7 +46,7 @@
   }
   
   h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--primary);
   }
   
@@ -267,7 +267,25 @@
   }
   
   .about-image {
-    flex: 1;
+    flex: 3;
+    /* Container styles */
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+  }
+  
+  .about-image img {
+    max-width: 100%; /* Ensures image never exceeds container width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    object-fit: contain; /* Ensures whole image is visible */
+  }
+  
+  /* For better responsive control, you might want to add: */
+  @media (max-width: 768px) {
+    .about-image img {
+      max-width: 80%; /* Smaller on mobile */
+    }
   }
   
   .about-content {
@@ -582,5 +600,75 @@
     .testimonials {
         flex-direction: column;
         align-items: center;
+    }
+  }
+
+
+
+
+
+
+  /* Add these to your Home.css */
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Adjust this value as needed */
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* About Image */
+  .about-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Adjust this value as needed */
+    border-radius: 10px;
+    object-fit: contain;
+  }
+  
+  /* Adjust the about section layout */
+  .about .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px; /* Prevents image from getting too small */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-content {
+    flex: 1;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .hero-img {
+      max-height: 300px;
+    }
+    
+    .about-img {
+      max-height: 250px;
+    }
+    
+    .about .container {
+      flex-direction: column;
+    }
+    
+    .about-image {
+      margin-bottom: 30px;
+      min-width: auto;
     }
   }
